@@ -29,21 +29,20 @@ public class String1 {
         for(int i = 0; i < s.length(); i++)
             append(s.getChar(i));
     }	
-    public void reverse() {
-		char arr[]=new char[80];
-		size = str.length - 1;
-		    for(int i=0;i<=size;i++){
-		    arr[i]=str[size-i];}
-		    str=arr;
-		    
-	    }
-      public boolean equal(String1 s) {
+    public boolean equals(String1 s) {
 		    for(int i=0;i<size;i++){
 			    if(str[i]==s.getChar(i))
 				    return true;
 					    }
 		    return false;
 			    
-	    }	
+	    }
+	    public void reverse() {
+		char arr[]=new char[80];
+		    for(int i=0;i<size+1;i++){
+		    arr[i]=str[size-i];}
+		    str=arr;
+		    
+	    }
 	
 }
