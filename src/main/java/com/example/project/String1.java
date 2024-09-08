@@ -29,14 +29,17 @@ public class String1 {
         for(int i = 0; i < s.length(); i++)
             append(s.getChar(i));
     }	
-    public boolean equals(String1 s) {
-		    for(int i=0;i<size;i++){
-			    if(str[i]==s.getChar(i))
-				    return true;
-					    }
-		    return false;
-			    
-	    }
+   public boolean equal(String1 s) {
+       if(s.size != size)
+           return false;
+
+        for (int i = 0; i <= size; i++) {
+            if(s.str[i] != str[i])
+                return false;
+
+    }return true;
+
+    }
 	    public void reverse() {
 		char arr[]=new char[80];
 		    for(int i=0;i<size+1;i++){
