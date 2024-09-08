@@ -37,12 +37,17 @@ public class String1 {
 		    return false;
 			    
 	    }
-	   public void reverse() {
-		char arr[]=new char[80];
-		size = str.length - 1;
-		    for(int i=0;i<=size;i++){
-		    arr[i]=str[size-i];}
-		    str=arr;
-		    
-	    }
+	public void reverse() {
+        int start = 0;
+        int end = size; // Last valid index
+
+        while (start < end) {
+            char temp = str[start];
+            str[start] = str[end];
+            str[end] = temp;
+
+            start++;
+            end--;
+        }
+    }
 }
